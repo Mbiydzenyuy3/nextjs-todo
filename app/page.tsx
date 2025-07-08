@@ -1,21 +1,27 @@
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
-
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <div className="landing-page">
-          <h1>Make Your Todolist Here</h1>
-          <p>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50 p-4 sm:p-6 md:p-8">
+      <main className="flex flex-col items-center justify-center flex-1 text-center">
+        <div className="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+          <h1 className="text-4xl font-bold text-gray-800 mb-4">
+            Make Your Todolist Here
+          </h1>
+          <p className="text-gray-600 mb-8">
             Plan a successful day with our Todolist Plan. Helps keep track of
-            things <br /> you have to do and reminds you when you are too tired
-            to remember. <br /> Join us now
+            the things you have to do and reminds you when you&amp;apos;re too
+            tired to remember. Join us now.
           </p>
-          <button className="cta">Bucketlist</button>
+          <Link href="/Todolist">
+            <button className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-lg transition duration-300">
+              Plan Your Day
+            </button>
+          </Link>
         </div>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
+      <footer className="w-full py-4 mt-8">
         <a
           className="flex items-center gap-2 hover:underline hover:underline-offset-4"
           href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
